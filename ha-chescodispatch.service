@@ -1,0 +1,14 @@
+[Unit]
+Description=Home Assistant Chesco Dispatch
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/ha-chescofire
+ExecStart=/opt/ha-chescofire/run.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
